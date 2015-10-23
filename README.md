@@ -12,8 +12,9 @@ Installation & Usage
 git clone https://github.com/VaclavSynacek/react-isomorphic-static-site-generator-boilerplate.git
 cd react-isomorphic-static-site-generator-boilerplate
 npm start
-browser http://localhost:8080
 ```
+Browse to http://localhost:8080 .
+
 
 Dependencies
 -------------------
@@ -31,3 +32,4 @@ TODOs and wihes
 -------------------
 * autogenerate list of HTML files to be generated from React Router configuration (curently the routes are defined duplicitly in Routes.js and webpack.config.js)
 * make react and react-router external dependencies instead of parts of the webpacked bundle (all attempts to do so with externals directive failed, pull requests welcomed)
+* autogenerate gh-pages branch from source (currently the example works only as root directory on the webserver)

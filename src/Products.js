@@ -12,7 +12,7 @@ var ProductTile = React.createClass({
         return (
             <span>
             <DocumentMeta title="Marketing Site | List of Products" description="All our products are cool, jsut choose the coolest for you" />
-            <Link to={`/product/${this.props.data.id}/`}>
+            <Link to={`/react-isomorphic-static-site-generator-boilerplate/product/${this.props.data.id}/`}>
             <Col xs={6} md={4}>
                 <h2>{this.props.data.name}</h2>
                 <img src={this.props.data.img} alt={this.props.data.name + ' Photo'} />

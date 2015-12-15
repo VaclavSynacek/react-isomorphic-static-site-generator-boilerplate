@@ -11,7 +11,7 @@ import ProductDetail from './ProductDetail';
 import data from './ProductData';
 
 var Routes = (
-    	<Route path="/" component={App} data={data} >
+    	<Route path="/react-isomorphic-static-site-generator-boilerplate/" component={App} data={data} >
     		<IndexRoute component={About} />
         	<Route path="products" component={Products} />
         	<Route path="product/:id" component={ProductDetail} />

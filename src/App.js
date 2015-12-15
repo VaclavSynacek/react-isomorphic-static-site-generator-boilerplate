@@ -19,8 +19,8 @@ var App = React.createClass({
             <Navbar>
                 <NavBrand><a href="#">Marketing Site</a></NavBrand>
                 <Nav>
-                  <IndexLinkContainer to="/"><NavItem>About</NavItem></IndexLinkContainer>
-                  <LinkContainer to="/products"><NavItem>Products</NavItem></LinkContainer>
+                  <IndexLinkContainer to="/react-isomorphic-static-site-generator-boilerplate/"><NavItem>About</NavItem></IndexLinkContainer>
+                  <LinkContainer to="/react-isomorphic-static-site-generator-boilerplate/products"><NavItem>Products</NavItem></LinkContainer>
                   </Nav>
                 </Navbar>
 

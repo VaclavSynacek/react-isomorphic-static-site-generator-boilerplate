@@ -18,7 +18,7 @@ var Html = React.createClass({
 
 <body>
     <div id="content" dangerouslySetInnerHTML={this.props.reactApp} />
-    <script type="text/javascript" src="/bundle.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/react-isomorphic-static-site-generator-boilerplate/bundle.js" charset="utf-8"></script>
 </body>
 
 </html>

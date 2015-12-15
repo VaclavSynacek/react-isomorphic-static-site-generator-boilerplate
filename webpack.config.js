@@ -3,11 +3,11 @@ var webpack = require('webpack');
 var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
 
 var routes = [
-    '/',
-    '/products/',
-    '/product/something/',
-    '/product/somethingelse/',
-    '/product/anotherthing/'
+    '/react-isomorphic-static-site-generator-boilerplate/',
+    '/react-isomorphic-static-site-generator-boilerplate/products/',
+    '/react-isomorphic-static-site-generator-boilerplate/product/something/',
+    '/react-isomorphic-static-site-generator-boilerplate/product/somethingelse/',
+    '/react-isomorphic-static-site-generator-boilerplate/product/anotherthing/'
 ];
 
 
@@ -16,8 +16,8 @@ module.exports = {
         'main': './src/index'
     },
     output: {
-        path: path.join(__dirname, 'public'),
-        filename: 'bundle.js',
+        path: path.join(__dirname,  'public'),
+        filename: path.join('react-isomorphic-static-site-generator-boilerplate','bundle.js'),
         libraryTarget: 'umd'
     },
     module: {

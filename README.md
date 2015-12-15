@@ -5,6 +5,8 @@ Yet another isomorphic react boilerplate. This one does not require node on serv
 
 Suitable for small to medium sized sites such as a marketing site in example. Big sites with lots of contnet may need to refactor to not load all content in the javascript webpacked bundle at once.
 
+Live demo at [http://vaclavsynacek.github.io/react-isomorphic-static-site-generator-boilerplate/](http://vaclavsynacek.github.io/react-isomorphic-static-site-generator-boilerplate/)
+
 
 Installation & Usage
 -------------------
@@ -13,7 +15,7 @@ git clone https://github.com/VaclavSynacek/react-isomorphic-static-site-generato
 cd react-isomorphic-static-site-generator-boilerplate
 npm start
 ```
-Browse to http://localhost:8080 .
+Browse to [http://localhost:8080/react-isomorphic-static-site-generator-boilerplate/](http://localhost:8080/react-isomorphic-static-site-generator-boilerplate/) . You should see the same site as in [Live demo](http://vaclavsynacek.github.io/react-isomorphic-static-site-generator-boilerplate/) .
 
 
 Dependencies
@@ -28,7 +30,7 @@ Non-Dependencies
 -------------------
 Generates static HTML code that can be uploaded to any web server, no node runtime on server needed.
 
-TODOs and wihes
+TODOs and wishes
 -------------------
 * autogenerate list of HTML files to be generated from React Router configuration (curently the routes are defined duplicitly in Routes.js and webpack.config.js)
 * make react and react-router external dependencies instead of parts of the webpacked bundle (all attempts to do so with externals directive failed, pull requests welcomed)

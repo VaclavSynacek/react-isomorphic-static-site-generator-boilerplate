@@ -1,38 +1,38 @@
-import * as React from 'react';
+import React from 'react';
 import DocumentMeta from 'react-document-meta';
 
-import {Grid,Row,Col} from 'react-bootstrap';
-import {Link} from 'react-router';
+import { Grid, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router';
 
 
-var ProductTile = React.createClass({
+class ProductTile extends React.Component {
 
-    render: function() {
+    render() {
 
         return (
             <span>
-            <DocumentMeta title="Marketing Site | List of Products" description="All our products are cool, jsut choose the coolest for you" />
-            <Link to={`/react-isomorphic-static-site-generator-boilerplate/product/${this.props.data.id}/`}>
-            <Col xs={6} md={4}>
-                <h2>{this.props.data.name}</h2>
-                <img src={this.props.data.img} alt={this.props.data.name + ' Photo'} />
-            </Col>
-            </Link>
+                <DocumentMeta title="Marketing Site | List of Products" description="All our products are cool, jsut choose the coolest for you" />
+                <Link to={`/react-isomorphic-static-site-generator-boilerplate/product/${this.props.data.id}/`}>
+                    <Col xs={6} md={4}>
+                        <h2>{this.props.data.name}</h2>
+                        <img src={this.props.data.img} alt={this.props.data.name + ' Photo'} />
+                    </Col>
+                </Link>
             </span>
-            
+
         );
     }
-});
+};
 
 
-var Products = React.createClass({
+export default class Products extends React.Component {
 
-    render: function() {
+    render() {
 
         var data = this.props.data;
 
 
-        var productNodes = data.map(function(product) {
+        var productNodes = data.map(function (product) {
             return (
                 <ProductTile key={product.id} data={product} />
             );
@@ -41,19 +41,17 @@ var Products = React.createClass({
 
         return (
             <span>
-            {/*<Helmet title="Products" />*/}
-            <h1>Products</h1>
-            <Grid>
-                <Row>
+                {/*<Helmet title="Products" />*/}
+                <h1>Products</h1>
+                <Grid>
+                    <Row>
 
-            {productNodes}
+                        {productNodes}
 
-                </Row>
-            </Grid>
+                    </Row>
+                </Grid>
 
             </span>
         );
     }
-});
-
-module.exports = Products;
+};

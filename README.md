@@ -23,8 +23,8 @@ If the generated site will be hosted on web server root (e.g. not on GitHub wher
 
 Dependencies
 -------------------
-* React 0.14 & react-router
-* webpack & static-site-generator-webpack-plugin
+* React & react-router
+* webpack 2.0 & static-site-generator-webpack-plugin
 * react-bootstrap & react-router-bootstrap (can be easily removed, but is used in the example)
 * babel (can be removed if ES6 not needed)
 

@@ -1,32 +1,32 @@
 //index.js
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
 import ReactDOMServer from 'react-dom/server';
-import {Router} from 'react-router';
+import { applyRouterMiddleware, browserHistory, Router, createMemoryHistory, RoutingContext, match } from 'react-router';
+import { useScroll } from 'react-router-scroll';
 import Routes from './Routes';
 import util from 'util';
+import DocumentMeta from 'react-document-meta';
 
 
 
 
 //client code
 if (typeof document !== 'undefined') {
-    var createBrowserHistory = require('history/lib/createBrowserHistory');
-    
-
-    var history = createBrowserHistory();
-    //render app and attache to <div id="content"> in the HTML document
-    ReactDOM.render(<Router history={history}>{Routes}</Router>, document.getElementById('content'));
+    ReactDOM.render(
+        <Router
+            history={browserHistory}
+            render={applyRouterMiddleware(useScroll())}
+            routes={Routes}
+        />,
+        document.getElementById('content'));
 }
 
 
 
 //generator code
-module.exports = function render(locals, callback) {
-    //var Helmet = require('react-helmet');
-    var DocumentMeta = require('react-document-meta');
-    var createMemoryHistory = require('history/lib/createMemoryHistory');
-    var Html = require('./Html.js');
+export default function render(locals, callback) {
+    var Html = require('./Html.js').default;
 
     var history = createMemoryHistory(locals.path);
 

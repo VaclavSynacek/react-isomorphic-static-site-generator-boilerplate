@@ -1,4 +1,4 @@
-module.exports = [{
+export default [{
     id: 'something',
     name: 'Some Product',
     package: 10,

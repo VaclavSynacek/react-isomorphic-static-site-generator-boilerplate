@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import DocumentMeta from 'react-document-meta';
 
-var ProductDetail = React.createClass({
+export default class ProductDetail  extends React.Component {
 
-    render: function() {
+    render() {
 
         var id = this.props.params.id;
 
@@ -20,6 +20,4 @@ var ProductDetail = React.createClass({
             </span>
         );
     }
-});
-
-module.exports = ProductDetail;
+};

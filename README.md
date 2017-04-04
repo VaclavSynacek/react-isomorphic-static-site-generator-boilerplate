@@ -35,6 +35,5 @@ Generates static HTML code that can be uploaded to any web server, no node runti
 
 TODOs and wishes
 -------------------
-* autogenerate list of HTML files to be generated from React Router configuration (curently the routes are defined duplicitly in Routes.js and webpack.config.js)
 * make react and react-router external dependencies instead of parts of the webpacked bundle (all attempts to do so with externals directive failed, pull requests welcomed)
 * autogenerate gh-pages branch from source (currently the example generates all pages to public subdirectory, from there its subdirectory with project name is manually git commited to the gh-pages branch of this project)
